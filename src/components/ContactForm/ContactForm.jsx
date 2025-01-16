@@ -30,13 +30,13 @@ const ContactForm = ({onAdd}) => {
   return (
       <Formik initialValues={initialValues} onSubmit={handleSubmit} validationSchema={FeedbackSchema}>
           <Form className={s.form}>
-              <label htmlFor={nameFieldId}>Name</label>
-              <Field type="text" name="name" id={nameFieldId} />
-              <ErrorMessage name="name" component="span" />
-              <label htmlFor={telFieldId}>Number</label>
-              <Field type="tel" name="number" id={telFieldId} />
-              <ErrorMessage name="number" component="span" />
-			<button type="submit">Add contact</button>
+              <label className={s.label} htmlFor={nameFieldId}>Name</label>
+              <Field className={s.input} type="text" name="name" id={nameFieldId} />
+              <ErrorMessage className={s.error} name="name" component="span" />
+              <label className={s.label} htmlFor={telFieldId}>Number</label>
+              <Field className={s.input} type="tel" name="number" id={telFieldId} />
+              <ErrorMessage className={s.error} name="number" component="span" />
+              <button className={s.btn} type="submit">Add contact</button>
 			</Form>
     </Formik>
   )

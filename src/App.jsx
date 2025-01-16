@@ -33,7 +33,6 @@ function App() {
     })
   }
     
-
     const handleChange = (evt) => {
     setSearchValue(evt.target.value);
     };
@@ -41,7 +40,7 @@ function App() {
   const searchContact = contactList.filter(({ name }) => name.toLowerCase().includes(searchValue.toLowerCase()));
 
   return (
-    <div>
+    <div className='content'>
       <h1>Phonebook</h1>
       <ContactForm onAdd={addContact} />
       <SearchBox inputValue={searchValue} handleChange={handleChange} />

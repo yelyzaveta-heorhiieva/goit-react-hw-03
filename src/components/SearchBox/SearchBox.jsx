@@ -6,8 +6,8 @@ const SearchBox = ({inputValue, handleChange}) => {
      
   return (
         <div className={s.box}>
-            <label htmlFor={searchFieldId}>Find contacts by name</label>
-          <input type="text" name="search" id={searchFieldId} value={inputValue} onChange={handleChange} />
+            <label className={s.label} htmlFor={searchFieldId}>Find contacts by name</label>
+          <input className={s.input} type="text" name="search" id={searchFieldId} value={inputValue} onChange={handleChange} />
         </div>
   )
 }
