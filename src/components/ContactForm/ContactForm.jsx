@@ -34,7 +34,7 @@ const ContactForm = ({onAdd}) => {
               <Field className={s.input} type="text" name="name" id={nameFieldId} />
               <ErrorMessage className={s.error} name="name" component="span" />
               <label className={s.label} htmlFor={telFieldId}>Number</label>
-              <Field className={s.input} type="tel" name="number" id={telFieldId} />
+              <Field className={s.input} type="tel" name="number" id={telFieldId} pattern="[0-9\-]*"/>
               <ErrorMessage className={s.error} name="number" component="span" />
               <button className={s.btn} type="submit">Add contact</button>
 			</Form>
